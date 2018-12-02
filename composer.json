@@ -1,0 +1,15 @@
+{
+    "name": "lilun/design-pattern",
+    "authors": [
+        {
+            "name": "Lilun",
+            "email": "iamlilun@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    }
+}
