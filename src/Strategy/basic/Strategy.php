@@ -9,7 +9,7 @@ declare(strict_types=1);
  */
 
 
-namespace Src\Strategy;
+namespace Src\Strategy\Basic;
 
 
 abstract class Strategy

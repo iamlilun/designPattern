@@ -2,7 +2,7 @@
 declare(strict_types=1);
 /*
  |--------------------------------------
- |
+ | 具體演算法A
  |--------------------------------------
  |
  |
@@ -12,7 +12,11 @@ declare(strict_types=1);
 namespace Src\Strategy\basic;
 
 
-class ConcreteStrategyA
+class ConcreteStrategyA extends Strategy
 {
 
+    public function algorithmInterface()
+    {
+        echo "演算法A實現\n";
+    }
 }
