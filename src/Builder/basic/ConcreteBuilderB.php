@@ -2,7 +2,7 @@
 declare(strict_types=1);
 /*
  |--------------------------------------
- |
+ | Concrete Builder 具體建造者
  |--------------------------------------
  |
  |
@@ -12,7 +12,7 @@ declare(strict_types=1);
 namespace Src\Builder\basic;
 
 
-class ConcreteBuilderA extends Builder
+class ConcreteBuilderB extends Builder
 {
 
     private $product;
@@ -24,12 +24,12 @@ class ConcreteBuilderA extends Builder
 
     public function buildPartA()
     {
-        $this->product->add('零件A');
+        $this->product->add('零件X');
     }
 
     public function buildPartB()
     {
-        $this->product->add('零件B');
+        $this->product->add('零件Y');
     }
 
     public function getResult()
