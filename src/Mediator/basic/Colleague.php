@@ -8,14 +8,14 @@ declare(strict_types=1);
  |
  */
 
-namespace Src\basic\Mediator;
+namespace Src\Mediator\Basic;
 
 
 abstract class Colleague
 {
     protected $mediator;
 
-    public function setMediator(Mediator $mediator)
+    public function __construct(Mediator $mediator)
     {
         $this->mediator = $mediator;
     }

@@ -8,42 +8,38 @@ declare(strict_types=1);
  |
  */
 
-namespace Src\basic\Mediator;
+namespace Src\Mediator\Basic;
 
 
-class ConcreteMediator
+class ConcreteMediator extends Mediator
 {
-    public function fuck()
+    private $colleague1;
+
+    private $colleague2;
+
+    /**
+     * @param mixed $colleague1
+     */
+    public function setColleague1($colleague1): void
     {
-        echo "fuck\n";
+        $this->colleague1 = $colleague1;
     }
-//    private $colleague1;
-//
-//    private $colleague2;
-//
-//    /**
-//     * @param mixed $colleague1
-//     */
-//    public function setColleague1($colleague1): void
-//    {
-//        $this->colleague1 = $colleague1;
-//    }
-//
-//    /**
-//     * @param mixed $colleague2
-//     */
-//    public function setColleague2($colleague2): void
-//    {
-//        $this->colleague2 = $colleague2;
-//    }
-//
-//
-//    public function send($message, Colleague $colleague)
-//    {
-//        if($colleague == $this->colleague1){
-//            $this->colleague2->notify($message);
-//        } else {
-//            $this->colleague1->notify($message);
-//        }
-//    }
+
+    /**
+     * @param mixed $colleague2
+     */
+    public function setColleague2($colleague2): void
+    {
+        $this->colleague2 = $colleague2;
+    }
+
+
+    public function send($message, Colleague $colleague)
+    {
+        if($colleague == $this->colleague1){
+            $this->colleague2->notify($message);
+        } else {
+            $this->colleague1->notify($message);
+        }
+    }
 }

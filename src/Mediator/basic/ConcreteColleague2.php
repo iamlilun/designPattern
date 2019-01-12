@@ -8,7 +8,7 @@ declare(strict_types=1);
  |
  */
 
-namespace Src\basic\Mediator;
+namespace Src\Mediator\Basic;
 
 
 class ConcreteColleague2 extends Colleague
