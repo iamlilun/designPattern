@@ -21,8 +21,8 @@ class ConcreteWebSite extends WebSite
         $this->name = $name;
     }
 
-    public function use()
+    public function use(User $user)
     {
-        echo "網站分類： {$this->name}\n";
+        echo "網站分類： {$this->name} 用戶： {$user->getName()} \n";
     }
 }

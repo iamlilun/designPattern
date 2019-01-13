@@ -13,5 +13,9 @@ namespace Src\Flyweight\example;
 
 abstract class WebSite
 {
-    abstract public function use();
+    /**
+     * 使用網站
+     * @param User $user : 用戶物件
+     */
+    abstract public function use(User $user);
 }
